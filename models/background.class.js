@@ -13,15 +13,23 @@ export class Background extends MovableObject {
         ImageHub.BACKGROUND.layers.second[0],
         ImageHub.BACKGROUND.layers.first[0]
     ]
-    constructor() {
-        super().loadImage(
-            ImageHub.BACKGROUND.layers.first[0]
-        );
+    static backgroundLL = 0
+
+    constructor(path) {
+        super();
+        this.loadImage(path);
     }
 
-    backgroundLoop() {
-        for (i = 0; i < background_1.length; i++) {
-            return background_1.i;
-        }
-    }
+    // constructor() {
+    //     super().loadImage(
+    //         // ImageHub.BACKGROUND.layers.first[0]
+    //         // this.backgroundLoop()
+    //     );
+    // }
+
+    //     backgroundLoop() {
+    //         for (backgroundLL; backgroundLL < background_1.length; backgroundLL++) {
+    //             this.background_1[i];
+    //         }
+    //     }
 }

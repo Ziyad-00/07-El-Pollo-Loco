@@ -2,6 +2,7 @@ import { Background } from "./background.class.js";
 import { Character } from "./character.class.js";
 import { Chicken } from "./chicken.class.js";
 import { Cloud } from "./cloud.class.js";
+import { ImageHub } from "./ImageHub.class.js";
 
 export class World {
 
@@ -15,8 +16,11 @@ export class World {
         new Cloud()
     ];
 
+    // add background images bcz didnt work in BG class
     backgroundObjects = [
-        new Background()
+        new Background(ImageHub.BACKGROUND.layers.third[0]),
+        new Background(ImageHub.BACKGROUND.layers.second[0]),
+        new Background(ImageHub.BACKGROUND.layers.first[0])
     ];
 
     canvasRef;
@@ -44,13 +48,16 @@ export class World {
         });
     }
 
+    // for repeated element 
     addObjectsToMap(objects) {
         objects.forEach(o => {
             this.addToMap(o);
         })
     }
 
+
     addToMap(mo) {
+        console.log('Drawing object:', mo.img.src);
         this.ctx.drawImage(mo.img, mo.x, mo.y, mo.width, mo.height);
     }
 }
