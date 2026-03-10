@@ -1,0 +1,5 @@
+*.log
+toignore/
+
+input/*.pdf
+input/*.zip
