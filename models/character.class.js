@@ -5,13 +5,11 @@ import { MovableObject } from "./movable-object.calss.js";
 export class Character extends MovableObject {
 
 
-    currentImage = 0;
 
     constructor() {
         super().loadImage(ImageHub.CHARACTER.walk[0]);
         this.loadImages(ImageHub.CHARACTER.walk);
         // console.log(this.imageCache);
-
 
         this.animate();
     }

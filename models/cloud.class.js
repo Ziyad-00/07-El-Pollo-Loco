@@ -13,14 +13,10 @@ export class Cloud extends MovableObject {
     constructor() {
         super().loadImage(ImageHub.BACKGROUND.layers.clouds[0]);
         this.x = Math.random() * 700;
-        this.setAnimate();
+        this.animate();
     }
 
-
-    setAnimate() {
-        setInterval(() => {
-            this.x -= 0.5;
-        }, 1000 / 60)
+    animate() {
+        this.moveLeft();
     }
-
 }

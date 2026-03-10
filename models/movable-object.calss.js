@@ -1,10 +1,13 @@
 export class MovableObject {
 
-    x = 40;
+    x = 80;
     y = 140;
     img;
     height = 300;
     width = 120;
+
+    speed = 0.15;
+    currentImage = 0;
 
     // imageCache = []; yum nachfragen er hat so angefangen, daan spater al object erstellt!  code1
     imageCache = {};
@@ -31,6 +34,8 @@ export class MovableObject {
 
 
     moveLeft() {
-
+        setInterval(() => {
+            this.x -= this.speed;
+        }, 1000 / 60)
     }
 } 
