@@ -8,9 +8,9 @@ export class Chicken extends MovableObject {
     constructor() {
         super().loadImage(ImageHub.CHICKEN.normal.walk[0]);
         this.x = 140 + Math.random() * 500;
-        this.y = 340;
-        this.height = 100;
-        this.width = 100;
+        this.y = 355;
+        this.height = 80;
+        this.width = 80;
     }
 
 }

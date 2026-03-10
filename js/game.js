@@ -16,4 +16,8 @@ function init() {
 
 }
 
+
+let p = [5465, 456, 45, 64, 564, 654, 54, 64, 64, 54, 654, 654, 5];
+console.log("test  " + p);
+
 init();

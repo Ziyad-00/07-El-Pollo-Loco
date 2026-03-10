@@ -18,10 +18,13 @@ export class World {
 
     // add background images bcz didnt work in BG class
     backgroundObjects = [
+        new Background(ImageHub.BACKGROUND.layers.air),
         new Background(ImageHub.BACKGROUND.layers.third[0]),
         new Background(ImageHub.BACKGROUND.layers.second[0]),
         new Background(ImageHub.BACKGROUND.layers.first[0])
     ];
+    // new Background();
+
 
     canvasRef;
     ctx;
@@ -57,7 +60,7 @@ export class World {
 
 
     addToMap(mo) {
-        console.log('Drawing object:', mo.img.src);
+        // console.log('Drawing object:', mo.img.src); wtf!!!
         this.ctx.drawImage(mo.img, mo.x, mo.y, mo.width, mo.height);
     }
 }

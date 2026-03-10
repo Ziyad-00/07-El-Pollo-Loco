@@ -1,8 +1,7 @@
 export class ImageHub {
     static CHARACTER = {
-        idle: [
-
-        ]
+        idle: {
+        }
         ,
         walk: [
             "../img/2_character_pepe/2_walk/W-21.png",
@@ -25,8 +24,16 @@ export class ImageHub {
                 "../img/3_enemies_chicken/chicken_normal/1_walk/2_w.png",
                 "../img/3_enemies_chicken/chicken_normal/1_walk/3_w.png",
             ]
+            ,
+            dead: "../img/3_enemies_chicken/chicken_normal/2_dead/dead.png"
+        }
+        ,
+        small: {
+
+
         }
     }
+
 
     static BACKGROUND = {
         layers: {
@@ -53,6 +60,8 @@ export class ImageHub {
                 "../img/5_background/layers/4_clouds/2.png",
                 "../img/5_background/layers/4_clouds/full.png"
             ]
+            ,
+            air: "../img/5_background/layers/air.png"
         }
     }
 }
