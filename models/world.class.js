@@ -23,11 +23,13 @@ export class World {
         new Background(ImageHub.BACKGROUND.layers.third[0]),
         new Background(ImageHub.BACKGROUND.layers.second[0]),
         new Background(ImageHub.BACKGROUND.layers.first[0]),
+    ];
+    backgroundObjects1 = [
         new Background((ImageHub.BACKGROUND.layers.air), 719),
         new Background(ImageHub.BACKGROUND.layers.third[1], 719),
         new Background(ImageHub.BACKGROUND.layers.second[1], 719),
         new Background(ImageHub.BACKGROUND.layers.first[1], 719)
-    ];
+    ]
     // new Background();
 
     canvasRef;
@@ -55,6 +57,7 @@ export class World {
         this.ctx.translate(this.camera_x, 0);
 
         this.addObjectsToMap(this.backgroundObjects);
+        this.addObjectsToMap(this.backgroundObjects1);
         this.addObjectsToMap(this.clouds);
         this.addObjectsToMap(this.enemies);
         this.addToMap(this.character);
