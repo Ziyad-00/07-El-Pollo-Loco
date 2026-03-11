@@ -33,5 +33,4 @@ export class Chicken extends MovableObject {
         }, 100);
         this.moveLeft()
     }
-
 }

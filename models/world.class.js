@@ -3,6 +3,8 @@ import { Character } from "./character.class.js";
 import { Chicken } from "./chicken.class.js";
 import { Cloud } from "./cloud.class.js";
 import { ImageHub } from "./ImageHub.class.js";
+import { Keyboard } from "./keyboard.class.js";
+
 
 export class World {
 
@@ -15,6 +17,8 @@ export class World {
     clouds = [
         new Cloud()
     ];
+
+    keyboard;
 
     // add background images bcz didnt work in BG class
     backgroundObjects = [
@@ -29,10 +33,11 @@ export class World {
     canvasRef;
     ctx;
 
-    constructor(canvasRef_) {
+    constructor(canvasRef_, keyboard) {
         this.ctx = canvasRef_.getContext("2d");
         this.canvasRef = canvasRef_
         this.draw();
+        // this.keyboard = new Keyboard
 
     }
 
