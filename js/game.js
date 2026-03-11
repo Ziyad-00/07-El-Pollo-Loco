@@ -14,9 +14,8 @@ function init() {
 
     console.log("my char", world.character);
     console.log(world.enemies);
-
-
-
+    window.world = world;  ////// zum loschen spater aber ist gedacht um world sichtbar in console zu schaffen 
+    // window.character = world.character;   ////// zum loschen spater aber ist gedacht um world sichtbar in console zu schaffen 
 }
 Keyboard.addEvents();
 

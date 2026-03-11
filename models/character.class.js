@@ -1,9 +1,11 @@
 import { ImageHub } from "./ImageHub.class.js";
+import { Keyboard } from "./keyboard.class.js";
 import { MovableObject } from "./movable-object.calss.js";
 
 
 export class Character extends MovableObject {
 
+    world;
 
 
     constructor() {
@@ -16,12 +18,16 @@ export class Character extends MovableObject {
 
     animate() {
         setInterval(() => {
-            // 0/6=0 rest 0  ------ 1/6 = 0 rest 1 ----- 2/6 =0 rest 2 .......  unendless loop , man kann besser.
-            let i = this.currentImage % ImageHub.CHARACTER.walk.length;
+            if (Keyboard.RIGHT) {
 
-            let path = ImageHub.CHARACTER.walk[i];
-            this.img = this.imageCache[path];
-            this.currentImage++;
+                // 0/6=0 rest 0  ------ 1/6 = 0 rest 1 ----- 2/6 =0 rest 2 .......  unendless loop , man kann besser.
+                let i = this.currentImage % ImageHub.CHARACTER.walk.length;
+
+                let path = ImageHub.CHARACTER.walk[i];
+                this.img = this.imageCache[path];
+                this.currentImage++;
+            }
+
         }, 100);
     }
 

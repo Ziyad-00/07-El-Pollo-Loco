@@ -5,7 +5,6 @@ import { Cloud } from "./cloud.class.js";
 import { ImageHub } from "./ImageHub.class.js";
 import { Keyboard } from "./keyboard.class.js";
 
-
 export class World {
 
     character = new Character();
@@ -18,8 +17,6 @@ export class World {
         new Cloud()
     ];
 
-    keyboard;
-
     // add background images bcz didnt work in BG class
     backgroundObjects = [
         new Background(ImageHub.BACKGROUND.layers.air),
@@ -29,16 +26,22 @@ export class World {
     ];
     // new Background();
 
-
     canvasRef;
     ctx;
+    keyboard;
 
-    constructor(canvasRef_, keyboard) {
+
+    constructor(canvasRef_, keyboard_) {
         this.ctx = canvasRef_.getContext("2d");
         this.canvasRef = canvasRef_
+        this.keyboard = keyboard_;
         this.draw();
-        // this.keyboard = new Keyboard
+        this.setWorld();
+    }
 
+
+    setWorld() {
+        this.character.world = this; // was ist this.world ?? ====> schon aif this geandert und er meinte " diese aktule instanze der world" damit  ?
     }
 
     draw() {
@@ -62,7 +65,6 @@ export class World {
             this.addToMap(o);
         })
     }
-
 
     addToMap(mo) {
         // console.log('Drawing object:', mo.img.src); wtf!!!
