@@ -22,10 +22,10 @@ export class Background extends MovableObject {
     ]
     static backgroundLL = 0
 
-    constructor(path) {
+    constructor(path, x_ = 0) {
         super();
         this.loadImage(path);
-        // this.x = x_;
+        this.x = x_;
         // this.loadImages(background_1);
 
     }

@@ -23,10 +23,10 @@ export class World {
         new Background(ImageHub.BACKGROUND.layers.third[0]),
         new Background(ImageHub.BACKGROUND.layers.second[0]),
         new Background(ImageHub.BACKGROUND.layers.first[0]),
-        new Background(ImageHub.BACKGROUND.layers.air),
-        new Background(ImageHub.BACKGROUND.layers.third[1]),
-        new Background(ImageHub.BACKGROUND.layers.second[1]),
-        new Background(ImageHub.BACKGROUND.layers.first[1])
+        new Background((ImageHub.BACKGROUND.layers.air), 719),
+        new Background(ImageHub.BACKGROUND.layers.third[1], 719),
+        new Background(ImageHub.BACKGROUND.layers.second[1], 719),
+        new Background(ImageHub.BACKGROUND.layers.first[1], 719)
     ];
     // new Background();
 

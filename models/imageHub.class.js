@@ -50,8 +50,8 @@ export class ImageHub {
             ,
             third: [
                 "../img/5_background/layers/3_third_layer/1.png",
-                "../img/5_background/layers/3_third_layer/1.png",
-                "../img/5_background/layers/3_third_layer/1.png"
+                "../img/5_background/layers/3_third_layer/2.png",
+                "../img/5_background/layers/3_third_layer/full.png"
             ]
             ,
             clouds: [
