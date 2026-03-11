@@ -22,10 +22,12 @@ export class Character extends MovableObject {
         setInterval(() => { ///// make it walk
             if (Keyboard.RIGHT) {
                 this.x += this.speed;
+                this.otherDirection = false;
             }
 
             if (Keyboard.LEFT) {
                 this.x -= this.speed;
+                this.otherDirection = true;
             }
         }, 1000 / 30)
 
