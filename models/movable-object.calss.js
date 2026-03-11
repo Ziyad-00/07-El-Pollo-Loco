@@ -10,7 +10,7 @@ export class MovableObject {
     currentImage = 0;
     otherDirection = false;
 
-    // imageCache = []; yum nachfragen er hat so angefangen, daan spater al object erstellt!  code1
+    // imageCache = []; zum nachfragen er hat so angefangen, daan spater al object erstellt!  code1
     imageCache = {};
 
 
@@ -18,8 +18,8 @@ export class MovableObject {
         this.img = new Image();
         this.img.src = path;
     }
-    // walking bilder vorbereietet //ab hier aktualiesiert sich die seite ganze Zeit
 
+    // walking bilder vorbereietet //ab hier aktualiesiert sich die seite ganze Zeit
     loadImages(arr) {
         arr.forEach((path) => {
             let img = new Image();

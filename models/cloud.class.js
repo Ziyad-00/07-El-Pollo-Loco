@@ -14,6 +14,7 @@ export class Cloud extends MovableObject {
         super().loadImage(ImageHub.BACKGROUND.layers.clouds[0]);
         this.x = Math.random() * 700;
         this.animate();
+        this.speed = 1;
     }
 
     animate() {

@@ -22,14 +22,18 @@ export class World {
         new Background(ImageHub.BACKGROUND.layers.air),
         new Background(ImageHub.BACKGROUND.layers.third[0]),
         new Background(ImageHub.BACKGROUND.layers.second[0]),
-        new Background(ImageHub.BACKGROUND.layers.first[0])
+        new Background(ImageHub.BACKGROUND.layers.first[0]),
+        new Background(ImageHub.BACKGROUND.layers.air),
+        new Background(ImageHub.BACKGROUND.layers.third[1]),
+        new Background(ImageHub.BACKGROUND.layers.second[1]),
+        new Background(ImageHub.BACKGROUND.layers.first[1])
     ];
     // new Background();
 
     canvasRef;
     ctx;
     keyboard;
-
+    camera_x;
 
     constructor(canvasRef_, keyboard_) {
         this.ctx = canvasRef_.getContext("2d");
@@ -41,17 +45,21 @@ export class World {
 
 
     setWorld() {
-        this.character.world = this; // was ist this.world ?? ====> schon aif this geandert und er meinte " diese aktule instanze der world" damit  ?
+        this.character.world = this; // was ist this.world ?? ====> schon auf nur this geandert und er meinte " diese aktule instanze der world" damit  ?
     }
 
     draw() {
         // reset whole canvas 
-        this.ctx.clearRect(0, 0, this.canvasRef.width, this.canvasRef.height)
+        this.ctx.clearRect(0, 0, this.canvasRef.width, this.canvasRef.height);
+
+        this.ctx.translate(this.camera_x, 0);
 
         this.addObjectsToMap(this.backgroundObjects);
         this.addObjectsToMap(this.clouds);
         this.addObjectsToMap(this.enemies);
         this.addToMap(this.character);
+
+        this.ctx.translate(-this.camera_x, 0);
 
         let self = this;
         requestAnimationFrame(function () {

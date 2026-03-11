@@ -14,11 +14,18 @@ export class Background extends MovableObject {
         ImageHub.BACKGROUND.layers.second[0],
         ImageHub.BACKGROUND.layers.first[0]
     ]
+    background_2 = [
+        ImageHub.BACKGROUND.layers.air,
+        ImageHub.BACKGROUND.layers.third[1],
+        ImageHub.BACKGROUND.layers.second[1],
+        ImageHub.BACKGROUND.layers.first[1]
+    ]
     static backgroundLL = 0
 
     constructor(path) {
         super();
         this.loadImage(path);
+        // this.x = x_;
         // this.loadImages(background_1);
 
     }
