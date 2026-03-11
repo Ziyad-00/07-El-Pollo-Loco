@@ -8,6 +8,7 @@ export class MovableObject {
 
     speed = 0.15;
     currentImage = 0;
+    otherDirection = false;
 
     // imageCache = []; yum nachfragen er hat so angefangen, daan spater al object erstellt!  code1
     imageCache = {};
