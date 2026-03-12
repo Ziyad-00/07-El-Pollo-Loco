@@ -4,6 +4,7 @@ import { Chicken } from "../models/chicken.class.js";
 import { Cloud } from "../models/cloud.class.js";
 import { ImageHub } from "../models/ImageHub.class.js";
 import { Background } from "../models/background.class.js";
+import { Endboss } from "../models/endBoss.class.js";
 
 
 export const level1 = new Level(
@@ -12,7 +13,8 @@ export const level1 = new Level(
     [
         new Chicken(),
         new Chicken(),
-        new Chicken()
+        new Chicken(),
+        new Endboss()
     ],
     [
         new Cloud()

@@ -1,3 +1,5 @@
+import { ImageHub } from "./ImageHub.class.js";
+
 export class MovableObject {
 
     x = 80;
@@ -28,6 +30,16 @@ export class MovableObject {
             this.imageCache[path] = img;
         });
     }
+
+    playAnimation(images) {
+        let i = this.currentImage % images.length;
+        // 0/6=0 rest 0  ------ 1/6 = 0 rest 1 ----- 2/6 =0 rest 2 .......  unendless loop , man kann besser.
+        //so 0 1 2 3 4 5 0 1 2 3 4 5 ...... usw
+        let path = images[i];
+        this.img = this.imageCache[path];
+        this.currentImage++;
+    }
+
 
     moveRight() {
         console.log("moving Right");

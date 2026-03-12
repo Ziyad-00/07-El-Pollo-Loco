@@ -24,12 +24,12 @@ export class Chicken extends MovableObject {
 
     animate() {
         setInterval(() => {
-            // 0/6=0 rest 0  ------ 1/6 = 0 rest 1 ----- 2/6 =0 rest 2 .......  unendless loop , man kann besser.
-            let i = this.currentImage % ImageHub.CHICKEN.normal.walk.length;
+            // let i = this.currentImage % ImageHub.CHICKEN.normal.walk.length;
 
-            let path = ImageHub.CHICKEN.normal.walk[i];
-            this.img = this.imageCache[path];
-            this.currentImage++;
+            // let path = ImageHub.CHICKEN.normal.walk[i];
+            // this.img = this.imageCache[path];
+            // this.currentImage++;
+            this.playAnimation(ImageHub.CHICKEN.normal.walk);
         }, 100);
         this.moveLeft()
     }

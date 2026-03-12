@@ -15,7 +15,7 @@ export class Character extends MovableObject {
         // console.log(this.imageCache);
 
         this.animate();
-        this.speed = 10;
+        this.speed = 15;
     }
 
     animate() {
@@ -36,12 +36,8 @@ export class Character extends MovableObject {
 
         setInterval(() => {  //// walk imagechanging mechanusmus
             if (Keyboard.RIGHT || Keyboard.LEFT) { // nur wenn tatse gedruckt ist
-                let i = this.currentImage % ImageHub.CHARACTER.walk.length;
-                // 0/6=0 rest 0  ------ 1/6 = 0 rest 1 ----- 2/6 =0 rest 2 .......  unendless loop , man kann besser.
-                //so 0 1 2 3 4 5 0 1 2 3 4 5 ...... usw
-                let path = ImageHub.CHARACTER.walk[i];
-                this.img = this.imageCache[path];
-                this.currentImage++;
+
+                this.playAnimation(ImageHub.CHARACTER.walk);
             }
 
         }, 1000 / 30);
