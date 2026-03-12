@@ -18,6 +18,10 @@ export const level1 = new Level(
         new Cloud()
     ],
     [
+        new Background((ImageHub.BACKGROUND.layers.air), -720),
+        new Background(ImageHub.BACKGROUND.layers.third[1], -720),
+        new Background(ImageHub.BACKGROUND.layers.second[1], -720),
+        new Background(ImageHub.BACKGROUND.layers.first[1], -720),
         new Background(ImageHub.BACKGROUND.layers.air),
         new Background(ImageHub.BACKGROUND.layers.third[0]),
         new Background(ImageHub.BACKGROUND.layers.second[0]),
@@ -25,6 +29,14 @@ export const level1 = new Level(
         new Background((ImageHub.BACKGROUND.layers.air), 719),
         new Background(ImageHub.BACKGROUND.layers.third[1], 719),
         new Background(ImageHub.BACKGROUND.layers.second[1], 719),
-        new Background(ImageHub.BACKGROUND.layers.first[1], 719)
+        new Background(ImageHub.BACKGROUND.layers.first[1], 719),
+        new Background((ImageHub.BACKGROUND.layers.air), 1439),
+        new Background(ImageHub.BACKGROUND.layers.third[0], 1439),
+        new Background(ImageHub.BACKGROUND.layers.second[0], 1439),
+        new Background(ImageHub.BACKGROUND.layers.first[0], 1439),
+        new Background((ImageHub.BACKGROUND.layers.air), 2159),
+        new Background(ImageHub.BACKGROUND.layers.third[1], 2159),
+        new Background(ImageHub.BACKGROUND.layers.second[1], 2159),
+        new Background(ImageHub.BACKGROUND.layers.first[1], 2159)
     ]
 );

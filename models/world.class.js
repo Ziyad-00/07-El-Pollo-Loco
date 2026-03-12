@@ -14,10 +14,12 @@ import { level1 } from "../levels/level1.js";
 export class World {
 
     character = new Character();
-    // Level = level1;
-    enemies = level1.enemies;
-    clouds = level1.clouds;
-    backgroundObjects = level1.backgroundObjects;
+    level = level1;             /// level wird = level1  welche vererbt von Level /////wtf
+    // enemies = level1.enemies;
+    // clouds = level1.clouds;
+    // backgroundObjects = level1.backgroundObjects;
+
+
     // add background images bcz didnt work in BG class
 
     // new Background();
@@ -47,10 +49,10 @@ export class World {
 
         this.ctx.translate(this.camera_x, 0);
 
-        this.addObjectsToMap(this.backgroundObjects);
+        this.addObjectsToMap(this.level.backgroundObjects);
         // this.addObjectsToMap(this.backgroundObjects1);
-        this.addObjectsToMap(this.clouds);
-        this.addObjectsToMap(this.enemies);
+        this.addObjectsToMap(this.level.clouds);  ///  level wird = level1  welche vererbt von Level // ist hier in world class defeniert 
+        this.addObjectsToMap(this.level.enemies);
         this.addToMap(this.character);
 
         this.ctx.translate(-this.camera_x, 0);

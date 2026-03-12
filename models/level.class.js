@@ -4,6 +4,7 @@ export class Level {
     enemies;
     clouds;
     backgroundObjects;
+    level_end_x = 1439;
 
 
     constructor(enemies_, clouds_, backgroundObjects_) {
@@ -12,4 +13,4 @@ export class Level {
         this.backgroundObjects = backgroundObjects_;
     }
 
-}
+} 
