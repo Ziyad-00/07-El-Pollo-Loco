@@ -8,18 +8,18 @@ export class Background extends MovableObject {
     y = 0;
     height = 480;
     width = 720;
-    background_1 = [
-        ImageHub.BACKGROUND.layers.air,
-        ImageHub.BACKGROUND.layers.third[0],
-        ImageHub.BACKGROUND.layers.second[0],
-        ImageHub.BACKGROUND.layers.first[0]
-    ]
-    background_2 = [
-        ImageHub.BACKGROUND.layers.air,
-        ImageHub.BACKGROUND.layers.third[1],
-        ImageHub.BACKGROUND.layers.second[1],
-        ImageHub.BACKGROUND.layers.first[1]
-    ]
+    // background_1 = [
+    //     ImageHub.BACKGROUND.layers.air,
+    //     ImageHub.BACKGROUND.layers.third[0],
+    //     ImageHub.BACKGROUND.layers.second[0],
+    //     ImageHub.BACKGROUND.layers.first[0]
+    // ]
+    // background_2 = [
+    //     ImageHub.BACKGROUND.layers.air,
+    //     ImageHub.BACKGROUND.layers.third[1],
+    //     ImageHub.BACKGROUND.layers.second[1],
+    //     ImageHub.BACKGROUND.layers.first[1]
+    // ]
     static backgroundLL = 0
 
     constructor(path, x_ = 0) {
@@ -27,10 +27,7 @@ export class Background extends MovableObject {
         this.loadImage(path);
         this.x = x_;
         // this.loadImages(background_1);
-
     }
-
-
 
     // constructor() {
     //     super().loadImage(

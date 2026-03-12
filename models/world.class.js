@@ -4,32 +4,22 @@ import { Chicken } from "./chicken.class.js";
 import { Cloud } from "./cloud.class.js";
 import { ImageHub } from "./ImageHub.class.js";
 import { Keyboard } from "./keyboard.class.js";
+import { Level } from "../models/level.class.js";
+import { level1 } from "../levels/level1.js";
+
+// Nico sagte: muss am besten manuel generieren:
+// ich habe spater bemerkt warum, es kann anderer Link geben je nach file ordner wie von hier kopieren zum level1 
+// wird nicht fuktionieren, weil: "../models", weil es ist in anderer Ordner
 
 export class World {
 
     character = new Character();
-    enemies = [
-        new Chicken(),
-        new Chicken(),
-        new Chicken()
-    ];
-    clouds = [
-        new Cloud()
-    ];
-
+    // Level = level1;
+    enemies = level1.enemies;
+    clouds = level1.clouds;
+    backgroundObjects = level1.backgroundObjects;
     // add background images bcz didnt work in BG class
-    backgroundObjects = [
-        new Background(ImageHub.BACKGROUND.layers.air),
-        new Background(ImageHub.BACKGROUND.layers.third[0]),
-        new Background(ImageHub.BACKGROUND.layers.second[0]),
-        new Background(ImageHub.BACKGROUND.layers.first[0]),
-    ];
-    backgroundObjects1 = [
-        new Background((ImageHub.BACKGROUND.layers.air), 719),
-        new Background(ImageHub.BACKGROUND.layers.third[1], 719),
-        new Background(ImageHub.BACKGROUND.layers.second[1], 719),
-        new Background(ImageHub.BACKGROUND.layers.first[1], 719)
-    ]
+
     // new Background();
 
     canvasRef;
@@ -43,6 +33,7 @@ export class World {
         this.keyboard = keyboard_;
         this.draw();
         this.setWorld();
+
     }
 
 
@@ -57,7 +48,7 @@ export class World {
         this.ctx.translate(this.camera_x, 0);
 
         this.addObjectsToMap(this.backgroundObjects);
-        this.addObjectsToMap(this.backgroundObjects1);
+        // this.addObjectsToMap(this.backgroundObjects1);
         this.addObjectsToMap(this.clouds);
         this.addObjectsToMap(this.enemies);
         this.addToMap(this.character);
