@@ -1,12 +1,5 @@
-import { Background } from "./background.class.js";
 import { Character } from "./character.class.js";
-import { Chicken } from "./chicken.class.js";
-import { Cloud } from "./cloud.class.js";
-import { ImageHub } from "./ImageHub.class.js";
-import { Keyboard } from "./keyboard.class.js";
-import { Level } from "../models/level.class.js";
 import { level1 } from "../levels/level1.js";
-import { Endboss } from "./endBoss.class.js";
 
 // Nico sagte: muss am besten manuel generieren:
 // ich habe spater bemerkt warum, es kann anderer Link geben je nach file ordner wie von hier kopieren zum level1 

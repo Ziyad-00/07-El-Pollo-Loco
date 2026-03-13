@@ -1,4 +1,4 @@
-import { ImageHub } from "./ImageHub.class.js";
+import { ImageHub } from "./imageHub.class.js";
 import { MovableObject } from "./movable-object.calss.js";
 
 

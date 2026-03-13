@@ -1,10 +1,9 @@
 import { Level } from "../models/level.class.js";
-
 import { Chicken } from "../models/chicken.class.js";
 import { Cloud } from "../models/cloud.class.js";
-import { ImageHub } from "../models/ImageHub.class.js";
 import { Background } from "../models/background.class.js";
 import { Endboss } from "../models/endBoss.class.js";
+import { ImageHub } from "../models/imageHub.class.js";
 
 
 export const level1 = new Level(
@@ -42,3 +41,4 @@ export const level1 = new Level(
         new Background(ImageHub.BACKGROUND.layers.first[1], 2159)
     ]
 );
+

@@ -1,4 +1,3 @@
-import { ImageHub } from "./ImageHub.class.js";
 
 export class MovableObject {
 

@@ -1,6 +1,5 @@
-import { ImageHub } from "./ImageHub.class.js";
+import { ImageHub } from "./imageHub.class.js";
 import { Keyboard } from "./keyboard.class.js";
-import { Level } from "./level.class.js";
 import { MovableObject } from "./movable-object.calss.js";
 
 
@@ -56,4 +55,3 @@ export class Character extends MovableObject {
         this.speedY = 30;
     }
 }
-
