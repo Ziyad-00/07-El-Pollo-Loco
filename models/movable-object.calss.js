@@ -12,6 +12,20 @@ export class MovableObject {
     currentImage = 0;
     otherDirection = false;
 
+    speedY = 0;
+    acceleration = 10;
+    applygravity() {                // michanismus der fall /// to adjust , not working well!!!!!!!
+        setInterval(() => {
+            if (this.y < 125) {
+                this.y -= this.speedY;
+                this.speedY -= this.acceleration;
+            }
+        }, 1000 / 25);
+    }
+    isAboveGround() {  ///////// sole in if () in applygravity but didnt work !!!!
+        return this.y < 125;
+    }
+
     // imageCache = []; zum nachfragen er hat so angefangen, daan spater al object erstellt!  code1
     imageCache = {};
 

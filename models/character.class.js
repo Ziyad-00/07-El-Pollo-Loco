@@ -13,9 +13,10 @@ export class Character extends MovableObject {
         super().loadImage(ImageHub.CHARACTER.walk[0]);
         this.loadImages(ImageHub.CHARACTER.walk);
         // console.log(this.imageCache);
-
+        this.applygravity();
         this.animate();
         this.speed = 15;
+        this.y = 20;
     }
 
     animate() {
@@ -44,7 +45,7 @@ export class Character extends MovableObject {
     }
 
     jump() {
-
+        this.speedY = 30;
     }
 }
 
