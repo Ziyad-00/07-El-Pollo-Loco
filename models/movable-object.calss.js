@@ -3,7 +3,7 @@ import { ImageHub } from "./ImageHub.class.js";
 export class MovableObject {
 
     x = 80;
-    y = 140;
+    y = 30;
     img;
     height = 300;
     width = 120;
@@ -16,7 +16,7 @@ export class MovableObject {
     acceleration = 10;
     applygravity() {                // michanismus der fall /// to adjust , not working well!!!!!!!
         setInterval(() => {
-            if (this.y < 125) {
+            if (this.y < 125 || this.speedY > 0) {
                 this.y -= this.speedY;
                 this.speedY -= this.acceleration;
             }

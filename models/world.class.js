@@ -16,10 +16,6 @@ export class World {
 
     character = new Character();
     level = level1;             /// level wird = level1  welche vererbt von Level /////wtf
-    // enemies = level1.enemies;
-    // clouds = level1.clouds;
-    // backgroundObjects = level1.backgroundObjects;
-
 
     // add background images bcz didnt work in BG class
 
