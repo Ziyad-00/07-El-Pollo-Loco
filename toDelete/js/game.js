@@ -1,6 +1,7 @@
 import { Keyboard } from "../models/keyboard.class.js";
 import { World } from "../models/world.class.js";
 
+
 let canvasRef;
 let world;
 let keyboard = new Keyboard();

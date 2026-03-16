@@ -1,6 +1,6 @@
-import { ImageHub } from "./imageHub.class.js";
+import { ImageHub } from "./imagehub.class.js";
 import { Keyboard } from "./keyboard.class.js";
-import { MovableObject } from "./movable-object.class.js";
+import { MovableObject } from "./movable-object.calss.js";
 
 export class Character extends MovableObject {
 

@@ -1,4 +1,5 @@
-import { MovableObject } from "./movable-object.class.js";
+import { MovableObject } from "./movable-object.calss.js";
+
 
 export class Background extends MovableObject {
 

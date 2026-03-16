@@ -1,5 +1,6 @@
-import { ImageHub } from "./imageHub.class.js";
-import { MovableObject } from "./movable-object.class.js";
+import { ImageHub } from "./imagehub.class.js";
+import { MovableObject } from "./movable-object.calss.js";
+
 
 export class Cloud extends MovableObject {
 

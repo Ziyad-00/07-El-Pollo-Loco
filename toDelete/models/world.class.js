@@ -1,11 +1,12 @@
+import { level1 } from "../levels/level1.js";
+import { Character } from "./character.class.js";
+
 // Nico sagte: muss am besten manuel generieren:
 // ich habe spater bemerkt warum, es kann anderer Link geben je nach file ordner wie von hier kopieren zum level1 
 // wird nicht fuktionieren, weil: "../models", weil es ist in anderer Ordner
 
-import { level1 } from "../levels/level1.js";
-import { Character } from "./character.class.js";
-
 export class World {
+
     character = new Character();
     level = level1;             /// level wird = level1  welche vererbt von Level /////wtf
     // add background images bcz didnt work in BG class
