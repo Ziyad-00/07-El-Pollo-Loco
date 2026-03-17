@@ -11,13 +11,18 @@ export class MovableObject {
     currentImage = 0;
     otherDirection = false;
 
+
+
     speedY = 0;
     acceleration = 10;
     applygravity() {                // michanismus der fall /// to adjust , not working well!!!!!!!
         setInterval(() => {
-            if (this.y < 125 || this.speedY > 0) {
+            if (this.y < 140 || this.speedY > 0) {
                 this.y -= this.speedY;
                 this.speedY -= this.acceleration;
+            }
+            if (this.y >= 140) {             ////////// von nico // funktioniert
+                this.y = 140;
             }
         }, 1000 / 25);
     }
