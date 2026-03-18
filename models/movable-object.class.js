@@ -21,12 +21,12 @@ export class MovableObject {
                 this.y -= this.speedY;
                 this.speedY -= this.acceleration;
             }
-            if (this.y >= 140) {             ////////// von nico // funktioniert
+            if (this.y >= 140) {             ////////// von Nico // funktioniert
                 this.y = 140;
             }
         }, 1000 / 25);
     }
-    isAboveGround() {  ///////// sole in if () in applygravity but didnt work !!!!
+    isAboveGround() {  ///////// sollte in if () in applygravity but didnt work !!!!
         return this.y < 125;
     }
 
